@@ -1,0 +1,29 @@
+// promediodenotas.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int main()
+{
+	double examen1, examen2, examen3, proyecto, examenfinal, nota, promedio;
+	cout << "introduce la nota del primer parcial:" << endl;
+	cin >> examen1;
+	cout << "introuce la nota del segundo parcial:" << endl;
+	cin >> examen2;
+	cout << "introduce la nota del tercer parcial:" << endl;
+	cin >> examen3;
+	cout << "introduce la nota del proyecto:" << endl;
+	cin >> proyecto;
+	cout << "introduce la nota del examen final:" << endl;
+	cin >> examenfinal;
+	nota = ((examen1 + examen2 + examen3) / 3) * 0.40;
+	cout << "el resultado de los praciales es:" << endl;
+	cout << nota << endl;
+	proyecto *= 0.20;
+	examenfinal *= 0.40;
+	promedio = nota + proyecto + examenfinal;
+	cout << "la nota final es:" << endl;
+	cout << promedio;
+
+}
