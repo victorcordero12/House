@@ -1,0 +1,27 @@
+// Diametro.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int main()
+{
+	double diametro, area, volumen, circunferencia, p, radio;
+	cout << "introduce el diametro:" << endl;
+	cin >> diametro;
+	p= 3.141516;
+	circunferencia = p * diametro;
+	area = p * ( diametro*diametro / 4);
+	cout << "la circunferencia es:" << endl;
+	cout << circunferencia << endl;
+	cout << "el area es:" << endl;
+	cout << area << endl;
+	//volumen de una esfera
+	cout << "introduce el radio de la esfera:" << endl;
+	cin >> radio;
+	volumen = (4* (p * (radio * radio * radio)))/3;
+	cout << "el volumen es:" << endl;
+	cout << volumen;
+
+
+}
