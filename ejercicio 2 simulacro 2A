@@ -1,0 +1,37 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void leer(float& x, float& y)
+{
+	cin >> x >> y;
+}
+int main() {
+	float x1, y1, x2, y2, x3, y3, m1, m2;
+	cout << "ingrese el P1: ";
+	leer(x1, y1);
+	cout << "ingrese el P2: ";
+	leer(x2, y2);
+	cout << "ingrese el P3: ";
+	leer(x3, y3);
+	m1 = (y2 - y1) / (x2 - x1);
+	m2 = (y3 - y2) / (x3 - x2);
+	if (x1==x2 && x2==x3)
+	{
+		cout << "se encuentran en la misma recta" << endl;
+	}
+	else
+	{
+		if (m1 == m2) {
+			cout << "se encuentran en la misma recta" << endl;
+		}
+		else {
+			if (x1 == x2 && y1 == y2 || x1 == x3 && y1 == y3 || x3 == x2 && y3 == y2) {
+				cout << "se encuentra en la misma recta" << endl;
+			
+			}
+			else
+				cout << "no se encuentran en la misma recta" << endl;
+		}
+	}
+
+}
