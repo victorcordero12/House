@@ -1,0 +1,57 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float leer() {
+	float r;
+	cin >> r;
+	while (r < 0) {
+		cin >> r;
+	}
+	return r;
+}
+float perimetro(float r) {
+	float p;
+	p = 2 * 3.1416 * r;
+	return p;
+}
+void area(float r) {
+	float a;
+	a = 4 * 3.1416 * r * r;
+	cout << "area: " << a << endl;
+}
+float volumen(float r) {
+	float v;
+	v = 4 / 3 * 3.1416 * r * r;
+	return v;
+}
+int main()
+{
+	float r, p, v;
+	int opc;
+	cout << "Ingresar el radio (positivo):";
+	r = leer();
+	cout << "------------MENU-----------" << endl;
+	cout << "[1]-> Calculo del perimetro" << endl;
+	cout << "[2]-> Calculo del area" << endl;
+	cout << "[3]-> Calculo del volumen" << endl;
+	cout << "[4]-> Salir" << endl;
+	cout << "Presione una opcion del 1 al 4: ";
+	cin >> opc;
+	switch (opc) {
+	case 1: 
+		p = perimetro(r);
+		cout << "perimetro: " << p << endl;
+		break;
+	case 2:
+		area(r);
+		break;
+	case 3:
+		v = volumen(r);
+		cout << "volumen: " << v << endl;
+		break;
+	case 4: 
+		cout << "salir..";
+		break;
+	}
+
+}
