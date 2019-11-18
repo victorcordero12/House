@@ -1,0 +1,28 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+bool verificarprimo(int n) {
+	bool primo = false;
+	int i = 1, cont = 0;
+	while (i <= n) {
+		if (n % i == 0) { cont++; }
+		i = i + 1;
+	}
+	if (cont == 2) {
+		primo = true;
+	}
+	return primo;
+}
+int main()
+{
+	int n;
+	bool primo;
+	cout << "ingresar N: ";
+	cin >> n;
+	primo = verificarprimo(n);
+	if (primo == true) {
+		cout << "es primo" << endl;
+	}
+	else { cout << "no es primo" << endl; 
+	}
+}
