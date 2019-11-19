@@ -1,0 +1,26 @@
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+//prototipo de funciones
+void pedirdatos();
+void mult(float x, float y);
+float num1, num2;
+int main() {
+
+	pedirdatos();
+	mult(num1,num2);
+
+		return 0;
+}
+
+void pedirdatos() {
+	cout << "digite 2 numeros: ";
+	cin >> num1 >> num2;
+}
+
+void mult(float x, float y) {
+	float multipicacion = x * y;
+
+	cout << "la mult es : " << multipicacion << endl;
+}
