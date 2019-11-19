@@ -1,0 +1,29 @@
+
+#include <iostream>
+#include "conio.h"
+using namespace std;
+//prototipo de funciones
+void pedirdatos();
+void funpot(int x, int y);
+int numero, exponente;
+
+int main() {
+	pedirdatos();
+	funpot(numero, exponente);
+	return 0;
+}
+
+void pedirdatos() {
+	cout << "digite un numero: ";
+	cin >> numero;
+	cout << "exponente: ";
+	cin >> exponente;
+}
+
+void funpot(int x, int y) {
+	long resultado = 1;
+	for (int i = 1; i <= y; i++) {
+		resultado *= x;
+	}
+	cout << "el resultado es: " << resultado;
+}
