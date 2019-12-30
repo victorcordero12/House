@@ -1,0 +1,69 @@
+// examennn.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include "conio.h"
+#define MAXCOL 20
+#define MAXROW 20
+using namespace std;
+void cargar(int matrix[MAXROW][MAXCOL], int n, int m) {
+	int i, j;
+	for (i=0;i<n;i++)
+		for (j = 0; j < m; j++) {
+			cout << " MAT [" << i << "][" << j << "]: ";
+			cin >> matrix[i][j];
+		}
+}
+void ep (int x,int y){
+	int nota;
+	cout << "ingresa la nota practica: " << endl;
+	cin >> nota;
+	nota = nota * 0.2;
+	cout << "la nota practica es:" << nota << endl;
+}
+void parciales(int x){
+	int prom,pond;
+	int p1, p2, p3;
+	cout << "ingresar el primer parcial:" << endl;
+	cin >> p1;
+	cout << "ingresar el segundo parcial:" << endl;
+	cin >> p2;
+	cout << "ingresar el tercer parcial:" << endl;
+	cin >> p3;
+	pond = (p1 + p2 + p3) / 3;
+	prom = ((p1 + p2 + p3) / 3) * 0.4;
+	cout << "la nota es:" << prom << endl;
+}
+void final(int pf) {
+	cout << "ingresar el final:" << endl;
+	cin >> pf;
+	pf = pf * 0.4;
+	cout << "la nota es:" << pf << endl;
+}
+
+void main() {
+	int n, m, matriz[MAXROW][MAXCOL];
+	int x = 0, y = 0;
+	
+	do {
+		cout << "ingrese el numero de alumnos:";
+		cin >> n;
+	} while ((n > MAXROW) || (n <= 0));
+
+	do {
+		cout << "ingrese el numero de columnas:";
+		cin >> m;
+	} while ((m > MAXCOL) || (m <= 0));
+	cargar(matriz, n, m);
+	cant(x, y);
+}
+void cant(int x, int y) {
+	int al;
+	do {
+		cout << "cantidad de alumnos:" << endl;
+		cin >> al;
+		ep(x, y);
+		parciales(x);
+		final(x);
+	} while (al < 0);
+}
